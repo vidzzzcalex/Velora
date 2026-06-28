@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VELORA | Urban Intelligence &amp; Predictive Journeys</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1d1b1a",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-tertiary-container": "#868381",
+                    "on-secondary-fixed-variant": "#5b4315",
+                    "surface-container": "#efeded",
+                    "inverse-surface": "#2f3031",
+                    "primary-container": "#1c1b1b",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e3e2e2",
+                    "primary": "#000000",
+                    "secondary-container": "#fcd89c",
+                    "tertiary-fixed": "#e6e1df",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-tertiary-fixed-variant": "#484645",
+                    "surface-dim": "#dbdad9",
+                    "outline": "#747878",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "secondary-fixed": "#ffdea9",
+                    "on-error": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface-variant": "#e3e2e2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary-container": "#775d2d",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#444748",
+                    "surface-container-low": "#f4f3f3",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1b1c1c",
+                    "outline-variant": "#c4c7c7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary-fixed-dim": "#cac6c3",
+                    "on-surface": "#1b1c1c",
+                    "secondary-fixed-dim": "#e5c188",
+                    "on-secondary-fixed": "#271900",
+                    "surface": "#faf9f9",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "background": "#faf9f9",
+                    "secondary": "#755a2a",
+                    "surface-container-high": "#e9e8e8",
+                    "surface-bright": "#faf9f9",
+                    "tertiary-container": "#1d1b1a",
+                    "on-primary-container": "#858383",
+                    "inverse-primary": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-clip {
+            clip-path: ellipse(100% 85% at 50% 10%);
+        }
+        .organic-clip-bottom {
+            clip-path: ellipse(150% 100% at 50% 100%);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px currentColor;
+            color: transparent;
+        }
+        .aura-glow {
+            background: radial-gradient(circle, rgba(229, 193, 136, 0.15) 0%, rgba(250, 249, 249, 0) 70%);
+        }
+        .transition-aura {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/70 backdrop-blur-2xl text-primary sticky top-0 z-50 border-b-[0.5px] border-outline-variant/30 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary">VELORA</div>
+<div class="hidden md:flex gap-12">
+<a class="font-body-md text-body-md uppercase tracking-widest text-secondary border-b border-secondary/50 pb-1" href="#">Experience</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors duration-500" href="#">Journeys</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors duration-500" href="#">Fleet</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors duration-500" href="#">The Aura</a>
+</div>
+<button class="px-8 py-2 bg-primary text-on-primary font-body-md uppercase tracking-widest text-body-md hover:scale-95 transition-all duration-300">
+            Sign In
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] flex items-center overflow-hidden">
+<!-- Shader Background -->
+
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-6xl w-full">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 animate-fade-in">
+                VELORA
+            </h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant max-w-2xl mb-12 italic opacity-90">
+                Every Journey, Perfectly Predicted.
+            </p>
+<div class="flex flex-col md:flex-row gap-6">
+<button class="group relative px-10 py-5 bg-primary text-on-primary font-body-md uppercase tracking-widest text-body-md flex items-center gap-4 transition-aura hover:bg-on-surface-variant">
+                    Plan My Journey
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">east</span>
+</button>
+<button class="px-10 py-5 border border-outline/30 text-primary font-body-md uppercase tracking-widest text-body-md hover:bg-surface-container-low transition-colors duration-300">
+                    Explore Live Network
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-margin-desktop hidden md:flex items-center gap-4 opacity-40">
+<div class="w-[1px] h-12 bg-outline"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em]">Scroll to Discover</span>
+</div>
+</header>
+<!-- Problem Story Section -->
+<section class="relative bg-surface py-section-gap overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full aura-glow pointer-events-none"></div>
+<div class="px-margin-mobile md:px-margin-desktop grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 order-2 md:order-1 relative">
+<div class="aspect-[4/5] rounded-[120px_20px_120px_20px] overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-1000" data-alt="A moody, high-fashion editorial photograph of a congested urban intersection at twilight. The long-exposure tail lights create streaks of crimson and gold against the deep blacks and greys of the city. The overall aesthetic is minimalist and high-end, focusing on the cinematic texture of the pavement and the soft glow of distant streetlights in a light-mode color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvs9RJiuSS7L7RCd36rLa0NY6eKxO35wmPp65-wIDVrk6DAJbXvDbcbW4wAtknmARz7hUqKz6Zb22xlQgx4lsucfF65pOwlLsGjTgjjvbmNMFE4Ly_gIaoL2n2ANxGurfU-piyJpG2kYoagzLneir_rabEJoqBZTCay-JOsCTxAD_VUMN1xFWruP8XVMFaRLFVC1JuS7CIRQ-XDWbejNk3IaYbVPktyFrZI7CItTcUvAKSkj72uaxulA0hr205m53nRXTpC-kTxQ"/>
+</div>
+<!-- Float Decoration -->
+<div class="absolute -bottom-10 -right-10 bg-surface-container p-8 border-[0.5px] border-outline-variant/30 max-w-xs hidden md:block">
+<p class="font-body-md text-body-md text-on-surface italic">
+                        "The modern metropolis shouldn't be a maze. It should be a symphony."
+                    </p>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 order-1 md:order-2 mb-16 md:mb-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">The Context</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 leading-tight">
+                    This isn't traffic. <br/><span class="italic">It's lost life.</span>
+</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+                        Current urban mobility is reactive. We wait for the congestion to form, for the train to be delayed, for the crowd to peak. Every minute spent in transit uncertainty is a minute stolen from the human experience.
+                    </p>
+<p>
+                        Velora was built on the premise that intelligence must be predictive, not just observational. We don't just see the city; we anticipate its pulse.
+                    </p>
+</div>
+<div class="mt-12 h-[1px] w-32 bg-secondary/30"></div>
+</div>
+</div>
+</section>
+<!-- AI Ecosystem Highlights (Bento-style editorial) -->
+<section class="py-section-gap bg-surface-container-low relative">
+<div class="px-margin-mobile md:px-margin-desktop mb-section-gap text-center max-w-4xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                The Intelligence Core
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Synthesizing billions of data points into silent, perfect guidance.
+            </p>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1: Demand Prediction -->
+<div class="group flex flex-col">
+<div class="relative aspect-video mb-8 overflow-hidden rounded-t-[40px] rounded-br-[40px]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A minimalist architectural visualization of a futuristic transportation hub. The space is filled with soft natural light and features clean white curves and high-end materials. Subtle gold lines trace the movement of people, representing predictive data flows. The mood is calm, organized, and luxury-focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFv1ceAg99AeWPQrGM6ISqvWWkG-a8Hyp8L04Jsl9jxePSZyYD05ik2siQGEiTgSWakqZQz-NPD1djVYpspuRDafHEVCyP1v_4CvqcweiqE6CnsMbptZisfvlbf1R0ngfOOVzmrImUy53DhVXajWQv5pTWFCb-uFZ8ktacNTtw8A1cVJVYnqhkfqpRhRybKZXxrCBb4MNPmk3DkLU1DmOM03X7slAvzHMPS0QJk14eZHui_PnTal2oknSUXEjXEyOAv7NG3qR4wLk"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+<h3 class="font-headline-md text-headline-md text-primary">Demand Prediction</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Our neural network anticipates ridership peaks 24 hours before they occur, allowing for seamless fleet distribution.
+                </p>
+<a class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-2 group" href="#">
+                    View Methodology <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2: Traffic Intelligence -->
+<div class="group flex flex-col md:translate-y-12">
+<div class="relative aspect-video mb-8 overflow-hidden rounded-tr-[40px] rounded-bl-[40px]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic, abstract visualization of urban traffic patterns. Glowing golden particles flow through dark grey geometric streets like blood through veins. The image is clean and editorial, using deep contrast to highlight the organic flow of the city's movement in a high-end luxury tech style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAymv5Jd7zwV7dWUazM9-vPwRJ0HetlSCSSq3pREGOYmW-UEdB8J7yd3Mbs_XZg7dFtVQRx8fKZAxjtioQWxcRTngsSgYYmLwggtae5fraad9PnCavDDLwMzy-cZTRhxdPS6UWyqQrl_nrYzSccHsWIL1S-kfN-HWsjKhGDqs_vy_JyKrgpV_GC8Tu--oVJpv1sQ87Lr5pQmCOzgpT7dk70CJoYU7p1ikUDPNTi9QN8qOk0hV7Xwby1A2S2LuiO8nmUWSlEF6ZnJlU"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">hub</span>
+<h3 class="font-headline-md text-headline-md text-primary">Traffic Intelligence</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Real-time atmospheric modeling that accounts for everything from micro-climates to local event schedules.
+                </p>
+<a class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-2 group" href="#">
+                    Explore Network <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3: Crowd Forecasting -->
+<div class="group flex flex-col">
+<div class="relative aspect-video mb-8 overflow-hidden rounded-t-[40px] rounded-bl-[40px]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A wide-angle editorial shot of a high-end public plaza. People move gracefully through the space, their silhouettes softly blurred to suggest motion. The lighting is warm golden-hour sun reflecting off glass and polished stone. Subtle data overlays in minimal gold indicate flow density and crowd forecasting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACA1wRIqN_hL4qAsGhIytJ87jXhTCLizF82f6LSzdx-UCazdXHduVoEhqWTHlnXw3GRp_CFjvmU44WtXS4rc1Q4ao77ljiyv258O2eQ4EZyZJxyuV9sL5wIRfyvjRB4ZPs57xZXDICpwpB-56b6uA4aP-TEYerdIcn6cq-bug7gLBlUNB3YxnvxvBNSSdHuBOaTa6z6piOIubOLnh_UVKOmeaCpTU_TB8MsID1ARCBZQNnPzMp3TG61DxkRJyS0qecMwEggDauy8Y"/>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary">Crowd Forecasting</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Maintaining the digital sanctuary of personal space through precise density management and rerouting.
+                </p>
+<a class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-2 group" href="#">
+                    The Solution <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Large Immersive Visual Break -->
+<section class="h-[819px] w-full relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking, expansive landscape of a modern smart city at sunrise. The architecture is organic and integrated with lush greenery. The lighting is a masterpiece of soft pinks, soft golds, and cool greys. The image feels peaceful, utopian, and deeply sophisticated, perfectly capturing the brand essence of Velora." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvqhCk61siWnJa-EiEB0voqGpFdtoPWDA0LN966Jhli2ha7q-tNVydMsrQjUknFaxsfhuU4U1iW8eSG8h-uLSQ3FHUJsXjz4PCSeUt6ErYMNBKQhBaC27VPK8DBfmRQbVD-kLhZpCLPLhWiEdkZiZRWmDoSZYhkr9CqcByhkbCUCd1MTkJdgls2w9Qs1IAUZfkns9sZrfEemeCGAdqn16X-EAsjeNL_jT9XmNrRJfm6Lo5LVTe4eEPJtDoQwyEgfaqypExmNUbvkE"/>
+</div>
+<div class="absolute inset-0 bg-primary/10 z-10"></div>
+<div class="relative z-20 text-center max-w-4xl px-margin-mobile">
+<h2 class="font-display-lg text-surface-container-lowest mb-8 text-shadow-lg">
+                The Future of Being There.
+            </h2>
+<div class="w-20 h-[1px] bg-secondary-fixed mx-auto mb-8"></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface text-primary border-t-[0.5px] border-secondary/30 w-full px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start gap-16 mb-20">
+<div class="max-w-sm">
+<div class="font-headline-md text-headline-md text-primary mb-6">VELORA</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Pioneering the intersection of artificial intelligence and urban mobility to restore the sanctity of your time.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Navigation</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Journeys</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Fleet</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Company</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Press</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Social</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors italic" href="#">Journal</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors italic" href="#">Archive</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors italic" href="#">Loom</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-gutter pt-12 border-t border-outline-variant/10">
+<span class="font-body-md text-body-md text-on-surface-variant">© 2024 VELORA Urban Intelligence. All rights reserved.</span>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>
