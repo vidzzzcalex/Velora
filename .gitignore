@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.local
+.env
+.env.*
+*.jpeg
+*.png
+37a5bb9b-*
